@@ -5,6 +5,20 @@
 </div>
 
 <div *ngIf="visible;then evenClicked else oddClicked">This works</div>
+<div *ngIf="counter %2; let randomVariable">
+  Yes {{randomVariable}}!!!!
+</div>
+
+
+<div *ngIf="myFavLang.frontend; let frontEndLanguages">
+  Yes {{frontEndLanguages.join(',')}}!!!!
+</div>
+
+
+<ul *ngFor="let language of myFavLangArray; let even = even;">
+  <li *ngIf = "even">{{language.name}} - {{language.type}}</li>
+</ul>
+
 <button (click)= "toggleDiv()">Toggle Div</button>
 
 
