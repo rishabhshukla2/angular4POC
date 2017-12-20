@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-header></app-header>
 <div style="text-align:center">
   <h1 blueColored>iChamp</h1>
   
@@ -9,15 +10,24 @@
   Yes {{randomVariable}}!!!!
 </div>
 
+<table class = "table" style="float : right">
+    <tr >
+      <th>Firstname</th>
+      <th>Lastname</th> 
+      <th>Experience</th> 
+    </tr>
+    <tr *ngFor="let language of myFavLangArray;">
+      <td>{{language.name}}</td>
+      <td>{{language.type}}</td> 
+      <td>{{language.name}}</td>
+    </tr>
+    
+  </table>
+  <add-details *ngIf="showAddDetails"></add-details>
+  <button class="mb10" (click)= "addDeveloperData()">Add Data</button>
 
-<div *ngIf="myFavLang.frontend; let frontEndLanguages">
-  Yes {{frontEndLanguages.join(',')}}!!!!
-</div>
 
 
-<ul *ngFor="let language of myFavLangArray; let even = even;">
-  <li *ngIf = "even">{{language.name}} - {{language.type}}</li>
-</ul>
 
 <button (click)= "toggleDiv()">Toggle Div</button>
 

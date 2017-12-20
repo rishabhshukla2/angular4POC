@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   visible = true;
+  showAddDetails = false;
+  showAddDetailBtn = true;
   counter = 0;
   toggleDiv(){
     this.visible = !this.visible;
@@ -18,9 +20,14 @@ export class AppComponent {
     'backend':['nodejs','php','python','ruby']
   };
   myFavLangArray = [
-    {'name':'html','type':'frontend'},
-    {'name':'css','type':'frontend'},
-    {'name':'js','type':'frontend'},
-    {'name':'ruby','type':'backend'},
+    {'name':'Arun','type':'frontend developer', 'exp' : '2'},
+    {'name':'Akshay','type':'frontend developer', 'exp' : '2'},
+    {'name':'Rishabh','type':'frontend developer', 'exp' : '2'},
+    {'name':'Yatish','type':'backend developer', 'exp' : '2'},
   ];
+  
+  addDeveloperData(){
+    this.showAddDetails = !this.showAddDetails;
+    this.showAddDetailBtn = !this.showAddDetailBtn;
+  }
 }
